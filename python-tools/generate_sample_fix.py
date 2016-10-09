@@ -27,6 +27,7 @@ if __name__ == "__main__":
     num_of_msg = int(sys.argv[2])
 
     print("Supplied file name: " + file_name)
+    print ("Wanted message number: " + str(num_of_msg))
 
     delimiter = bytearray([1])
     newline = bytearray([0x0a])
@@ -38,3 +39,5 @@ if __name__ == "__main__":
                 f.write(create_tag())
                 f.write(delimiter)
             f.write(newline)
+
+    print("File generated!")
